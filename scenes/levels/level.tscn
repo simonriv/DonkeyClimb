@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://ba4y4hmvsu8lp"]
+[gd_scene load_steps=5 format=3 uid="uid://ba4y4hmvsu8lp"]
 
 [ext_resource type="Texture2D" uid="uid://dx6wa27ogqdvk" path="res://sprites/tileset/jungletileset.png" id="1_25h0n"]
+[ext_resource type="PackedScene" uid="uid://b30q5j37phsnq" path="res://scenes/characters/player.tscn" id="2_1qc3b"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lrym7"]
 texture = ExtResource("1_25h0n")
@@ -1039,4 +1040,7 @@ sources/0 = SubResource("TileSetAtlasSource_lrym7")
 texture_filter = 1
 tile_set = SubResource("TileSet_35vhm")
 format = 2
-layer_0/tile_data = PackedInt32Array(262145, 262144, 14, 262146, 131072, 14, 262147, 131072, 14, 262148, 262144, 14, 262149, 65536, 14, 262150, 65536, 14, 262151, 262144, 14, 262152, 131072, 14, 262153, 131072, 14, 262154, 65536, 14, 262155, 262144, 14, 262156, 196608, 14, 262157, 131072, 14, 262158, 65536, 14, 262159, 65536, 14, 262160, 65536, 14, 262161, 131072, 14, 262162, 196608, 14, 262163, 196608, 14, 262164, 196608, 14, 262165, 196608, 14)
+layer_0/tile_data = PackedInt32Array(262145, 262144, 14, 262146, 131072, 14, 262147, 131072, 14, 262148, 262144, 14, 262149, 65536, 14, 262150, 65536, 14, 262151, 262144, 14, 262152, 131072, 14, 262153, 131072, 14, 262154, 65536, 14, 262155, 262144, 14, 262156, 196608, 14, 262157, 131072, 14, 262158, 65536, 14, 262159, 65536, 14, 262160, 65536, 14, 262161, 131072, 14, 262162, 196608, 14, 262163, 196608, 14, 262164, 196608, 14, 262165, 196608, 14, 262166, 131072, 14, 262167, 131072, 14, 262169, 131072, 14, 262168, 131072, 14)
+
+[node name="Player" parent="." instance=ExtResource("2_1qc3b")]
+position = Vector2(56, 32)
