@@ -1,0 +1,61 @@
+[gd_scene load_steps=7 format=3 uid="uid://bxncc65esd80y"]
+
+[ext_resource type="Texture2D" uid="uid://dxi5xein5se77" path="res://sprites/parallax/jungle/plx-1.png" id="1_60s2t"]
+[ext_resource type="Script" path="res://scripts/parallax_jungle.gd" id="1_lh62m"]
+[ext_resource type="Texture2D" uid="uid://bqd1a1u1ja5hq" path="res://sprites/parallax/jungle/plx-2.png" id="2_mob22"]
+[ext_resource type="Texture2D" uid="uid://6gm4pbq6y510" path="res://sprites/parallax/jungle/plx-3.png" id="3_jf81e"]
+[ext_resource type="Texture2D" uid="uid://hpjqo068md7f" path="res://sprites/parallax/jungle/plx-4.png" id="4_w28kl"]
+[ext_resource type="Texture2D" uid="uid://cvfawlj85xixb" path="res://sprites/parallax/jungle/plx-5.png" id="5_pg2lu"]
+
+[node name="Parallax Jungle" type="ParallaxBackground"]
+script = ExtResource("1_lh62m")
+
+[node name="ParallaxLayer1" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(384, 0)
+
+[node name="Plx-1" type="Sprite2D" parent="ParallaxLayer1"]
+texture_filter = 1
+texture_repeat = 3
+position = Vector2(384, 216)
+scale = Vector2(3, 3)
+texture = ExtResource("1_60s2t")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(384, 0)
+
+[node name="Plx-2" type="Sprite2D" parent="ParallaxLayer2"]
+texture_filter = 1
+texture_repeat = 3
+position = Vector2(384, 216)
+scale = Vector2(3, 3)
+texture = ExtResource("2_mob22")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(384, 0)
+
+[node name="Plx-3" type="Sprite2D" parent="ParallaxLayer3"]
+texture_filter = 1
+texture_repeat = 3
+position = Vector2(384, 216)
+scale = Vector2(3, 3)
+texture = ExtResource("3_jf81e")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(384, 0)
+
+[node name="Plx-4" type="Sprite2D" parent="ParallaxLayer4"]
+texture_filter = 1
+texture_repeat = 3
+position = Vector2(384, 216)
+scale = Vector2(3, 3)
+texture = ExtResource("4_w28kl")
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(384, 0)
+
+[node name="Plx-5" type="Sprite2D" parent="ParallaxLayer5"]
+texture_filter = 1
+texture_repeat = 3
+position = Vector2(384, 216)
+scale = Vector2(3, 3)
+texture = ExtResource("5_pg2lu")
