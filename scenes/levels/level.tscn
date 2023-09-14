@@ -1184,6 +1184,8 @@ sources/0 = SubResource("TileSetAtlasSource_lrym7")
 [node name="Level" type="Node2D"]
 
 [node name="Parallax Jungle" parent="." instance=ExtResource("1_3dqo4")]
+scale = Vector2(0.4, 0.4)
+transform = Transform2D(0.4, 0, 0, 0.4, 0, 0)
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
