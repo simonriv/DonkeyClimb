@@ -4,12 +4,19 @@ extends CharacterBody2D
 @onready var anim = $AnimationPlayer
 @onready var ray = $RayCast2D
 
+signal player_interaction
+
+var interactiveObject = null
 # Lista de variables de stats player
 var player_parameters := {
+	"heart": 3,
+	"maxHeart":3,
 	"healt": 10,
 	"maxHealt": 10,
 	"stamina": 5,
-	"maxStamina": 5
+	"maxStamina": 5,
+	"spawnX": 56,
+	"spawnY": 152
 }
 # Variables para el movimiento y salto
 const SPEED = 150.0
@@ -26,6 +33,7 @@ func _physics_process(delta):
 	playerClimb()
 	playerMove()
 	playerAnimation()
+	playerDie()
 
 func fallGravity(delta):
 	if canMove:
@@ -88,3 +96,14 @@ func playerAnimation():
 	else:
 		spr.texture = load("res://sprites/character/Idle.png")
 		anim.play("Idle")
+
+func playerDie():
+	if player_parameters.healt == 0 and player_parameters.heart > 0:
+		position.x = player_parameters.spawnX
+		position.y = player_parameters.spawnY
+		player_parameters.heart = player_parameters.heart - 1
+	elif player_parameters.healt == 0 and player_parameters.heart == 0:
+		position.x = player_parameters.spawnX
+		position.y = player_parameters.spawnY
+		player_parameters.heart = player_parameters.maxHeart
+	
